@@ -18,20 +18,20 @@ const registration = {
     }
   }
 
-  //  function  newUserCreation() {
-  //     let login = document.querySelector("#login")
-  //     let password = document.querySelector("#password")
+   function  newUserCreation() {
+      let login = document.querySelector("#login")
+      let password = document.querySelector("#password")
 
-  //     let obj = {
-  //       email: "",
-  //       password: "",
-  //     }
+      let obj = {
+        email: "",
+        password: "",
+      }
 
-  //     obj.email = (login.value)
-  //     obj.password = (password.value)
-  //     userAPIFunctions.getUser(obj)
-  //       .then((respone) => respone.json()
-  //         .then((user) => sessionStorage(user))
-  //       )
-    // }
+      obj.email = (login.value)
+      obj.password = (password.value)
+      userAPIFunctions.getUser(obj)
+        .then((respone) => respone.json()
+          .then((user) => sessionStorage(user))
+        )
+    }
 export default registration

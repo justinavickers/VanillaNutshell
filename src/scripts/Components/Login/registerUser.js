@@ -3,15 +3,15 @@ import loginUser from "./loginUser"
 
 
 function registerUser(){
-  let login = document.querySelector("#login")
-  let password = document.querySelector("#password")
+  let login = document.querySelector("#login").value
+  let password = document.querySelector("#password").value
 
   let obj={
     email:"",
-    password:"",
+    password:""
   }
   obj.email = (login.value)
-  obbj.password = (password.value)
+  obj.password = (password.value)
   userAPIFunctions.postUser(obj)
   .then((response) => response.json()
   .then((user)=> loginUser(user))

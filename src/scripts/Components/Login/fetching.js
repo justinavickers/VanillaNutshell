@@ -3,17 +3,11 @@ const userAPIFunctions = {
   getUsers() {
     return fetch("http://localhost:8088/users")
       .then(users => users.json())
-      .then(parsedUsers => parsedUsers)
+      .then(parsedUsers => console.log(parsedUsers))
+
   },
-  // // fetch to validate email
-  // getUser(email) {
-  //   return fetch(`http://localhost:8088/users?email=${email}`)
-  //     .then(user => user.json())
-  //     .then(parsedUser => parsedUser[0])
-  // },
-  // fetch to piss new users into database
   postUser(obj) {
-    console.log("postrunning",obj)
+    console.log("postrunning", obj)
     return fetch("http://localhost:8088/users", {
       method: "POST",
       headers: {

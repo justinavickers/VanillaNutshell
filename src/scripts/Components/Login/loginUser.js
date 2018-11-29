@@ -3,9 +3,9 @@ import userAPIFunctions from "./fetching"
 function loginUser(){
   sessionStorage.clear()
   let email=document.querySelector("#login").value
-  userAPIFunctions.getUser(email)
+  userAPIFunctions.getUsers(email)
   .then((user)=>{
-    console.log(user.password)
+    console.log(user)
     let validated=validatedPassword(user)
     console.log("Setting session storage", user)
      if(validated){

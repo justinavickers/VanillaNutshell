@@ -1,12 +1,14 @@
-import registerUser from "./Login/registerUser"
 
-let existingUserButton = document.getElementById("loginButton")
-let newUsers = document.getElementById("signUpButton")
-newUsers.addEventListener("Click", ()=> {
-  registerUser()
+import userAPIFunctions from "./Components/Login/fetching"
+
+
+let existingUserButton = document.querySelector("#loginButton")
+let newUsers = document.querySelector("#signUpButton")
+newUsers.addEventListener("click", ()=> {
   alert("Welcome to our webpage")
 })
-existingUserButton.addEventListener("Click", ()=>{
-  registerUser()
+existingUserButton.addEventListener("click", ()=>{
   alert("Welcome to our webpage")
 })
+
+userAPIFunctions.getUsers()
