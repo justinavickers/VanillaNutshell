@@ -6,19 +6,70 @@
     <title>Browserify Boilerplate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="navBar.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
+
 <body>
-    <div class="navBar">
-    <ul>
-        <li><a href="loginUser.js">Home</a></li>
-        <li><a href="messageDisplay.js">Messages</a></li>
-        <li><a href="contact.asp">Articles</a></li>
-        <li><a href="about.asp">Events</a></li>
-        <li><a href="about.asp">Tasks</a></li>
 
+    <article class="login">
 
-      </ul>
+      <div id="loginBox" class="loginBox">
+        <input type="text" id="login" placeholder="Email" required>
+        <input type="text" id="password" placeholder="Password" required>
+        <input type="button" id="loginButton" class="loginButton" value="Login">
+        <input type="button" id="signUpButton" class="signUpButton" value="Register">
+      </div>
+
+      <div id="navBar" class="navBar hide">
+          <ul>
+              <li><a class="home">Home</a></li>
+              <li><a class="messageNav">Messages</a></li>
+              <li><a id="articleNav">Articles</a></li>
+              <li><a class="eventNav">Events</a></li>
+              <li><a class="taskNav">Tasks</a></li>
+          </ul>
+
+      <div id="messages" class="messages hide">
+        <div class="emptyMessageContainer"><p>YO DOG CHILI CHEESE</p></div>
+        <input type="text" id="message" class="message" placeholder="Message">
+        <input type="button" id="messageButton" class="messageButton" value="Send">
+      </div>
+
+      <aside class="messagesContainer"></aside>
+
+      <div id="taskBox" class="taskBox hide">
+        <input type="text" id="taskBox" class="taskBox" placeholder="Whatcha needta do?">
+          <div>
+            <p>Completion Date</p>
+              <input type="date" id="taskDate" class="taskDate">
+          </div>
+        <input type="button" id="submitTask" class="submitTask" value="Submit">
+        <input type="button" id="deleteTask" class="deleteTask" value="Delete">
+      </div>
+
+      <aside class="tasksContainer"></aside>
+
+      <div id="eventBox" class="eventBox hide">
+        <input type="text" id="eventName" class="eventName" placeholder="Name Of Event">
+        <input type="text" id="eventLocation" class="eventLocation" placeholder="Location">
+        <input type="text" id="eventDate" class="eventDate" placeholder="Date">
+        <input type="button" id="submitEvent" class="submitEvent" value="Submit">
+        <input type="button" id="editEvent" class="editEvent" value="Edit">
+        <input type="button" id="deleteEvent" class="deleteEvent" value="Delete">
+      </div>
+
+      <aside class="eventsContainer"></aside>
+
+      <div id="articleBox" class="articleBox hide">
+        <input type="text" id="articleTitle" class="articleTitle" placeholder="Title Of Article">
+        <input type="text" id="description" class="description" placeholder="Description">
+        <input type="text" id="url" class="url" placeholder="Paste URL">
+        <input type="button" id="submitArticle" class="submitArticle" value="Submit">
+        <input type="button" id="deleteArticle" class="deleteArticle" value="Delete">
+      </div>
+
+      <aside class="articlesContainer"></aside>
     </div>
     <div id= "loginBox" class="loginBox">
         <input type="text" id="login" class="login" placeholder="Email" required>
@@ -27,5 +78,7 @@
         <input type= "button" class="signUpButton" id="signUpButton" value="Register">
     </div>
     <script src="bundle.js"></script>
+
 </body>
+
 </html>
