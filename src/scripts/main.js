@@ -1,14 +1,16 @@
+import registerUser from "./Components/Login/registerUser";
 
-import userAPIFunctions from "./Components/Login/fetching"
+// import sessionStorageSetup from "./User_login/session_storage";
+// event listener for sign up and register buttons
+let existingUserButton = document.getElementById("loginButton")
+let newUsers = document.getElementById("signUpButton")
 
-
-let existingUserButton = document.querySelector("#loginButton")
-let newUsers = document.querySelector("#signUpButton")
 newUsers.addEventListener("click", ()=> {
-  alert("Welcome to our webpage")
+   registerUser()
+   alert("Welcome to our webpage")
 })
 existingUserButton.addEventListener("click", ()=>{
-  alert("Welcome to our webpage")
+   registerUser()
+   alert("Welcome to our webpage")
 })
 
-userAPIFunctions.getUsers()
