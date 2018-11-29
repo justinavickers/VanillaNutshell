@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Browserify Boilerplate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="navBar.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
@@ -18,6 +20,15 @@
         <input type="button" id="loginButton" class="loginButton" value="Login">
         <input type="button" id="signUpButton" class="signUpButton" value="Register">
       </div>
+
+      <div id="navBar" class="navBar hide">
+          <ul>
+              <li><a class="home">Home</a></li>
+              <li><a class="messageNav">Messages</a></li>
+              <li><a id="articleNav">Articles</a></li>
+              <li><a class="eventNav">Events</a></li>
+              <li><a class="taskNav">Tasks</a></li>
+          </ul>
 
       <div id="messages" class="messages hide">
         <div class="emptyMessageContainer"><p>YO DOG CHILI CHEESE</p></div>
@@ -59,9 +70,7 @@
       </div>
 
       <aside class="articlesContainer"></aside>
-
-    </article>
-
+    </div>
     <script src="bundle.js"></script>
 
 </body>
