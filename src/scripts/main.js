@@ -1,6 +1,5 @@
 import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
-import messageComponent from "./Components/Messages/messageDisplay"
 import tasksToDom from "./Components/Tasks/injectTask"
 import eventsDom from "./Components/Events/displayEvents"
 
@@ -24,8 +23,6 @@ taskNav.addEventListener("click", ()=> {
 eventNav.addEventListener("click", () => {
   eventsDom()
 })
-
-messageComponent()
 
 // message.addEventListener("click", () => {
    //    location.clear()
