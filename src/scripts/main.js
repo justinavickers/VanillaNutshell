@@ -9,13 +9,12 @@ const article = document.querySelector("#articleNav")
 const task= document.querySelector("#taskNav")
 const event= document.querySelector("#eventNav")
 const logout= document.querySelector("#logOutNav")
+
 newUsers.addEventListener("click", ()=> {
    registerUser()
-   alert("Welcome to our webpage")
 })
 existingUserButton.addEventListener("click", ()=>{
    registerUser()
-   alert("Welcome to our webpage")
 })
 
 message.addEventListener("click", () => {hideDiv.hideMessageDiv()})

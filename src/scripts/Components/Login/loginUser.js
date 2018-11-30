@@ -13,8 +13,9 @@ function loginUser(){
                sessionStorage.setItem("user_id", user.id)
                hideDiv.hideLoginDiv()
                hideDiv.hideNavBarDiv()
+               alert("welcome")
            } else {
-               alert("wrong password!")
+               alert("wrong password")
            }
        })
    }
