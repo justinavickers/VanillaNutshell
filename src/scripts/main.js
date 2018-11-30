@@ -1,7 +1,5 @@
 import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
-
-import injection from "./Components/Tasks/injectTask"
 import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
@@ -32,8 +30,7 @@ message.addEventListener("click", ()=> { messageToDom()
 })
 
 eventNav.addEventListener("click", () => {
-  injection.eventsDom()
-  injection.formToDom()
+   eventsDom()
 })
 
 // message.addEventListener("click", () => {
