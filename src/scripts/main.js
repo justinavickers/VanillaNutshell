@@ -4,10 +4,12 @@ import hideDiv from "./Components/Login/classChanger"
 import injection from "./Components/Tasks/injectTask"
 import tasksToDom from "./Components/Tasks/injectTask"
 import eventsDom from "./Components/Events/displayEvents"
+import messageToDom from "./Components/Messages/messageDisplay"
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
 const logout= document.querySelector("#logOutNav")
+const message = document.querySelector("#messageNav")
 let taskNav = document.querySelector("#taskNav")
 const message = document.querySelector("#messageNav")
 
@@ -22,6 +24,8 @@ existingUserButton.addEventListener("click", ()=>{
 })
 taskNav.addEventListener("click", ()=> {
   tasksToDom()
+})
+message.addEventListener("click", ()=> { messageToDom()
 })
 
 eventNav.addEventListener("click", () => {

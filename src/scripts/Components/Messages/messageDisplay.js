@@ -5,15 +5,13 @@ let domEntry = document.querySelector(".domEntry")
 function domMessage(parsedMessages) {
   parsedMessages.forEach(message => {
     let messageContents = messageDiv(message)
-    domEntry.innerHTML += messageContents
+   domEntry.innerHTML += messageContents
   })
 }
 
-function clearDom(){
+
+let messagesToDom = () => {
   domEntry.innerHTML=""
-}
-let messageToDom = () => {
-  clearDom()
   messageFetching.getFunction().then(parsedMessages => domMessage(parsedMessages))
 }
-export default messageToDom
+export default messagesToDom

@@ -1,7 +1,7 @@
 const messageFetching={
 
 getFunction(){
-   return fetch("http://localhost:8088/messages")
+    return fetch("http://localhost:8088/messages")
     .then(messages => messages.json())
     .then(parsedMessages => parsedMessages)
 },
@@ -15,7 +15,7 @@ postFunction(){
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(entry)
+          body: JSON.stringify()
 
         }).then(post => post.json())
 },
