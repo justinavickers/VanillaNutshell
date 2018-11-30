@@ -1,7 +1,8 @@
 import articleFetching from "./fetching"
+import articleDisplay from "./articleDisplay"
 const aside = document.querySelector(".articlesContainer");
 
-function renderArticles(parsedarticles) {
+function renderArticles() {
   articles.forEach(article => {
     aside.innerHTML += articleDisplay(article);
   });

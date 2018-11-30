@@ -1,9 +1,9 @@
 const articleFetching={
 
   getFunction:() => {
-      fetch("http://localhost:8088/articles")
+      return fetch("http://localhost:8088/articles")
       .then(article => article.json())
-      .then(parsedarticles => parsedarticles)
+      .then(parsedArticles => parsedArticles)
   },
 
   postFunction(article){
@@ -14,7 +14,7 @@ const articleFetching={
             },
             body: JSON.stringify(article)
 
-          }).then(post => post.json())
+          }).then(post => post.json(article))
   },
 
   putFunction(article,id){
