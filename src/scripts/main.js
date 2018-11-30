@@ -17,5 +17,5 @@ existingUserButton.addEventListener("click", ()=>{
 
 console.log(taskDiv())
 
-const message = document.querySelector("#messsageNav")
+// const message = document.querySelector("#messsageNav")
 
