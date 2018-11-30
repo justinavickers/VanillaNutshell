@@ -1,4 +1,5 @@
 import userAPIfunctions from "./fetching"
+import hideDiv from "./classChanger"
 // creating a function to send logged in users information on the rest of there page
 function loginUser(){
    sessionStorage.clear()
@@ -10,8 +11,11 @@ function loginUser(){
            console.log("Setting session storage", user)
           if(validated){
                sessionStorage.setItem("user_id", user.id)
+               hideDiv.hideLoginDiv()
+               hideDiv.hideNavBarDiv()
+               alert("welcome")
            } else {
-               alert("wrong password!")
+               alert("wrong password")
            }
        })
    }
