@@ -1,4 +1,4 @@
-function taskFormDiv(task){
+function taskFormDiv(){
   let taskForm = `
   <div id="taskForm class="taskForm">
   <h1>New Task</h1>

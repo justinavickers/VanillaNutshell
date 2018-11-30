@@ -1,6 +1,5 @@
 import taskAPIFunctions from "./taskFetching"
 import taskDiv from "./task"
-import taskFormDiv from "./taskForm"
 
 let domEntry = document.querySelector(".domEntry")
 function domTask(parsedTasks) {
@@ -9,21 +8,13 @@ function domTask(parsedTasks) {
    domEntry.innerHTML += taskContents
   })
 }
-clearDom=()=>{
-  domEntry.innerHTML=""
-}
 
 let injection = {
 
   tasksToDom = () => {
-    clearDom()
+    domEntry.innerHTML=""
     taskAPIFunctions.getTasks().then(parsedTasks => domTask(parsedTasks))
-    taskFormDiv(task)
-  },
-  formToDom = () => {
-    clearDom()
-    taskFormContent = taskFormDiv(taskForm)
-    domEntry.innerHTML = taskFormContent
+    taskFormDiv()
   }
 }
 export default injection

@@ -9,7 +9,6 @@ import messageToDom from "./Components/Messages/messageDisplay"
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
 const logout= document.querySelector("#logOutNav")
-const message = document.querySelector("#messageNav")
 let taskNav = document.querySelector("#taskNav")
 const message = document.querySelector("#messageNav")
 
