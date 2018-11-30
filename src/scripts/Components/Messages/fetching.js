@@ -1,7 +1,7 @@
 const messageFetching={
 
-getFunction:() => {
-    fetch("http://localhost:8088/messages")
+getFunction(){
+   return fetch("http://localhost:8088/messages")
     .then(messages => messages.json())
     .then(parsedMessages => parsedMessages)
 },
@@ -9,7 +9,6 @@ getFunction:() => {
 deleteFunction(){
 
 },
-
 postFunction(){
         return fetch("http://localhost:8088/messages", {
           method: "POST",
