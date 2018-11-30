@@ -2,6 +2,7 @@ import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
 import tasksToDom from "./Components/Tasks/injectTask"
 import eventsDom from "./Components/Events/displayEvents"
+import messageToDom from "./Components/Messages/messageDisplay"
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
