@@ -28,6 +28,14 @@ const hideDiv = {
   hideTaskDiv() {
     const tasks = document.getElementById("taskBox")
     tasks.classList.toggle("hide")
+  },
+
+  LogOut() {
+    sessionStorage.clear()
+    const login = document.getElementById("loginBox")
+    login.classList.toggle("hide")
+    const navBar = document.getElementById("navBar")
+    navBar.classList.toggle("hide")
   }
 }
 

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Browserify Boilerplate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="navBar.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/navBar.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
@@ -23,15 +23,15 @@
 
       <div id="navBar" class="navBar hide">
           <ul>
-              <li><a class="home">Home</a></li>
-              <li><a id= "messageNav" class="messageNav">Messages</a></li>
-              <li><a id="articleNav" class= "articleNav">Articles</a></li>
-              <li><a class="eventNav">Events</a></li>
-              <li><a class="taskNav">Tasks</a></li>
+              <li id= "logOutNav"><a class="home">Logout</a></li>
+              <li id= "messageNav"><a class="messageNav">Messages</a></li>
+              <li id="articleNav"><a  class= "articleNav">Articles</a></li>
+              <li id= "eventNav"><a class="eventNav">Events</a></li>
+              <li id= "taskNav"><a class="taskNav">Tasks</a></li>
           </ul>
 
       <div id="messages" class="messages hide">
-        <div class="emptyMessageContainer"><p>YO DOG CHILI CHEESE</p></div>
+        <div class="emptyMessageContainer"></div>
         <input type="text" id="message" class="message" placeholder="Message">
         <input type="button" id="messageButton" class="messageButton" value="Send">
       </div>
