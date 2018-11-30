@@ -9,7 +9,8 @@ getFunction(){
 deleteFunction(){
 
 },
-postFunction(){
+
+postFunction(entry){
         return fetch("http://localhost:8088/messages", {
           method: "POST",
           headers: {
