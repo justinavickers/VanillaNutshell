@@ -20,3 +20,40 @@ function newArticlePost(){
 }
 
 export default newArticlePost
+
+import articleFetching from "./fetching"
+import articleDisplay from "./articleDisplay"
+
+
+
+function articleComponent(){
+    const domEntry = document.querySelector(".domEntry")
+    articleFetching.getFunction()
+    .then(parsedarticle =>parsedarticle.foreach(article => {
+    articleDisplayed = articleDisplay.articleDisplay(article)
+    }))
+
+domEntry.innerHTML += articleDisplayed
+}
+
+
+export default articleComponent
+
+
+
+
+
+
+
+
+
+
+
+
+function getArticles() {
+  articleFetching.getArtiEntries()
+    .then(entries => renderArticleEntries(entries))
+}
+getArticles()
+
+export default getArticles
