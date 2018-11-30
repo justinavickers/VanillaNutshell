@@ -2,6 +2,8 @@ import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
 import messageToDom from "./Components/Messages/messageDisplay"
 import injection from "./Components/Tasks/injectTask"
+import tasksToDom from "./Components/Tasks/injectTask"
+import eventsDom from "./Components/Events/displayEvents"
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
@@ -9,6 +11,7 @@ const logout= document.querySelector("#logOutNav")
 let taskNav = document.querySelector("#taskNav")
 const message = document.querySelector("#messageNav")
 
+let eventNav = document.querySelector("#eventNav")
 
 logout.addEventListener("click",()=> {hideDiv.LogOut()})
 newUsers.addEventListener("click", ()=> {
@@ -18,13 +21,16 @@ existingUserButton.addEventListener("click", ()=>{
    registerUser()
 })
 taskNav.addEventListener("click", ()=> {
-   injection.tasksToDom()
-   injection.formToDom()
-})
-message.addEventListener("click", ()=> {
-  messageToDom()
+  tasksToDom()
 })
 
+eventNav.addEventListener("click", () => {
+  eventsDom()
+})
+
+// message.addEventListener("click", () => {
+   //    location.clear()
+   //    messageComponent.messageComponent()})
    // article.addEventListener("click", () =>{ hideDiv.hideArticleDiv()})
    // task.addEventListener("click", () => { hideDiv.hideTaskDiv()})
    // event.addEventListener("click", ()=> { hideDiv.hideEventDiv()})
