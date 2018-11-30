@@ -1,6 +1,6 @@
 import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
-import messageToDom from "./Components/Messages/messageDisplay"
+
 import injection from "./Components/Tasks/injectTask"
 import tasksToDom from "./Components/Tasks/injectTask"
 import eventsDom from "./Components/Events/displayEvents"
@@ -25,7 +25,8 @@ taskNav.addEventListener("click", ()=> {
 })
 
 eventNav.addEventListener("click", () => {
-  eventsDom()
+  injection.eventsDom()
+  injection.formToDom()
 })
 
 // message.addEventListener("click", () => {

@@ -18,6 +18,7 @@ let injection = {
   tasksToDom = () => {
     clearDom()
     taskAPIFunctions.getTasks().then(parsedTasks => domTask(parsedTasks))
+    taskFormDiv(task)
   },
   formToDom = () => {
     clearDom()
