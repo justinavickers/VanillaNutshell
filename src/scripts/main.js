@@ -1,6 +1,7 @@
 import registerUser from "./Components/Login/registerUser";
 import hideDiv from "./Components/Login/classChanger"
 import messageComponent from "./Components/Messages/messageDisplay"
+import eventDisplay from "./Components/Events/eventDisplay";
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
@@ -15,6 +16,7 @@ existingUserButton.addEventListener("click", ()=>{
 })
 
 messageComponent()
+eventDisplay()
 
 
 // message.addEventListener("click", () => {
