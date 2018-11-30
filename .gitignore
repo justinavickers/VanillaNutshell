@@ -10,3 +10,4 @@ obj
 .vscode
 dist
 api/*.json
+package-lock.json
