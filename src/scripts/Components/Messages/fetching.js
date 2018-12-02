@@ -6,8 +6,10 @@ getFunction(){
     .then(parsedMessages => parsedMessages)
 },
 
-deleteFunction(){
-
+deleteFunction(id){
+  return fetch(`http://localhost:8088/messages/${id}`, {
+    method: "DELETE"
+  }).then(res => res.json())
 },
 
 postFunction(entry){
@@ -16,7 +18,7 @@ postFunction(entry){
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify()
+          body: JSON.stringify(entry)
 
         }).then(post => post.json())
 },
