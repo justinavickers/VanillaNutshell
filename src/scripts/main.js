@@ -3,6 +3,7 @@ import hideDiv from "./Components/Login/classChanger"
 import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
+import eventListening from "./Components/Events/eventListeners"
 import messageToDom from "./Components/Messages/messageDisplay"
 
 let existingUserButton = document.getElementById("loginButton")
@@ -30,15 +31,3 @@ message.addEventListener("click", ()=> { messageToDom()
 eventNav.addEventListener("click", () => {
   eventsDom()
 })
-
-// message.addEventListener("click", () => {
-   //    location.clear()
-   //    messageComponent.messageComponent()})
-   // article.addEventListener("click", () =>{ hideDiv.hideArticleDiv()})
-   // task.addEventListener("click", () => { hideDiv.hideTaskDiv()})
-   // event.addEventListener("click", ()=> { hideDiv.hideEventDiv()})
-   // event listener for sign up and register buttons
-   // const message = document.querySelector("#messageNav")
-   // const article = document.querySelector("#articleNav")
-   // const event= document.querySelector("#eventNav")
-
