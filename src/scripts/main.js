@@ -30,4 +30,7 @@ message.addEventListener("click", ()=> { messageToDom()
 })
 eventNav.addEventListener("click", () => {
   eventsDom()
+  eventListening.submitEvent()
+  eventListening.editEvent()
+  eventListening.deleteEvent()
 })

@@ -5,9 +5,9 @@ function eventDiv(event) {
   <p>Location: ${event.location}</p>
   <p>Date: ${event.date}</p>
   <p>Time: ${event.time}</p>
-  <button id="subEv" onClick="submit">Submit</button>
-  <button id="edEv" onClick="edit">Edit</button>
-  <button id="delEv" onClick="remove">Delete</button>
+  <button id="subEv">Submit</button>
+  <button id="edEv">Edit</button>
+  <button id="delEv">Delete</button>
   </div>`
 return events
 }
