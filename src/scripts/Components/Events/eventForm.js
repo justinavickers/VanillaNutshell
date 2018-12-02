@@ -10,7 +10,8 @@ function eventFormDiv() {
   <input type="button" id="deleteEvent" class="deteEvent" value="Delete">
 
   <aside class="eventsContainer">
-  </aside>`
+  </aside>
+  </div>`
 
   return eventForm
 }

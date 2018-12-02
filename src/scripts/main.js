@@ -27,7 +27,6 @@ article.addEventListener("click", ()=> {
    articleContentDOM()})
 message.addEventListener("click", ()=> { messageToDom()
 })
-
 eventNav.addEventListener("click", () => {
   eventsDom()
 })

@@ -13,4 +13,5 @@ let eventsDom = () => {
   domEntry.innerHTML=""
   eventAPIfunctions.getEvents().then(parsedEvents => domEvents(parsedEvents))
 }
+
 export default eventsDom
