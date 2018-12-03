@@ -1,6 +1,6 @@
 import taskAPIFunctions from "./taskFetching"
 import taskDiv from "./task"
-import taskFormDiv from "./taskForm"
+import taskForm from "./taskForm"
 
 let domEntry = document.querySelector(".domEntry")
 function domTask(parsedTasks) {
@@ -11,7 +11,7 @@ function domTask(parsedTasks) {
 }
 let tasksToDom = () => {
     domEntry.innerHTML=""
-    domEntry.innerHTML= taskFormDiv()
+    domEntry.innerHTML= taskForm()
     taskAPIFunctions.getTasks().then(parsedTasks => domTask(parsedTasks))
   }
 export default tasksToDom

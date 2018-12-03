@@ -4,7 +4,7 @@ import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
 import messageToDom from "./Components/Messages/messageDisplay"
-import saveTask from "./Components/Tasks/taskEvents"
+import newTask from "./Components/Tasks/taskEvents"
 import loginUser from "./Components/Login/loginUser"
 import messageFunctionality from "./Components/Messages/messageEventListners";
 
@@ -31,7 +31,7 @@ loginUser()
 
 taskNav.addEventListener("click", ()=> {
 tasksToDom()
-saveTask.newTask()
+newTask()
 })
 
 
