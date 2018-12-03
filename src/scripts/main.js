@@ -38,7 +38,7 @@ articleContentDOM()
 message.addEventListener("click", ()=> {
 messageToDom()
 messageFunctionality.messageButton()
-messageFunctionality.editButton()
+// messageFunctionality.editButton()
 messageFunctionality.deleteButton()
 })
 

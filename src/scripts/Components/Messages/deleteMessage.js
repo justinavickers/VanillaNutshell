@@ -1,10 +1,11 @@
 import messageFetching from "./fetching"
-function deleteMessages(){
-messageFetching.getFunction().then(parsedMessage => parsedMessage.forEach(message =>{
-    if (message.id === document.querySelector(`".${message.id}"`)){
-        messageFetching.deleteFunction(`${message.id}`)
-    }
-}))
+import messagesToDom from "./messageDisplay"
+function deleteMessages(e){
+    console.log(e)
+        messageFetching.deleteFunction(e).then(
+            messagesToDom
+        )
+
 }
 
 export default deleteMessages

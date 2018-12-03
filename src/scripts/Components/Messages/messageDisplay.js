@@ -13,7 +13,11 @@ function domMessage(parsedMessages) {
 
 let messagesToDom = () => {
     domEntry.innerHTML=""
-    domEntry.innerHTML = messageForm()
-    messageFetching.getFunction().then(parsedMessages => domMessage(parsedMessages))
+    // domEntry.innerHTML = messageForm()
+    messageFetching.getFunction()
+    .then(parsedMessages => domMessage(parsedMessages))
+    .then(() => {
+        domEntry.innerHTML += messageForm()
+    })
 }
 export default messagesToDom
