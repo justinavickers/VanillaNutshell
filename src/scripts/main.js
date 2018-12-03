@@ -4,6 +4,8 @@ import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
 import messageToDom from "./Components/Messages/messageDisplay"
+import loginUser from "./Components/Login/loginUser"
+import messageFunctionality from "./Components/Messages/messageEventListners";
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
@@ -13,33 +15,36 @@ let taskNav = document.querySelector("#taskNav")
 const article = document.querySelector("#articleNav")
 let eventNav = document.querySelector("#eventNav")
 
-logout.addEventListener("click",()=> {hideDiv.LogOut()})
+logout.addEventListener("click",()=> {
+   hideDiv.LogOut()
+})
+
 newUsers.addEventListener("click", ()=> {
-   registerUser()
+registerUser()
 })
+
 existingUserButton.addEventListener("click", ()=>{
-   registerUser()
+loginUser()
 })
+
 taskNav.addEventListener("click", ()=> {
-  tasksToDom()
+tasksToDom()
 })
+
 article.addEventListener("click", ()=> {
-   articleContentDOM()})
-message.addEventListener("click", ()=> { messageToDom()
+articleContentDOM()
+})
+
+message.addEventListener("click", ()=> {
+messageToDom()
+messageFunctionality.messageButton()
+messageFunctionality.editButton()
+messageFunctionality.deleteButton()
 })
 
 eventNav.addEventListener("click", () => {
-  eventsDom()
+eventsDom()
 })
 
-// message.addEventListener("click", () => {
-   //    location.clear()
-   //    messageComponent.messageComponent()})
-   // article.addEventListener("click", () =>{ hideDiv.hideArticleDiv()})
-   // task.addEventListener("click", () => { hideDiv.hideTaskDiv()})
-   // event.addEventListener("click", ()=> { hideDiv.hideEventDiv()})
-   // event listener for sign up and register buttons
-   // const message = document.querySelector("#messageNav")
-   // const article = document.querySelector("#articleNav")
-   // const event= document.querySelector("#eventNav")
+
 
