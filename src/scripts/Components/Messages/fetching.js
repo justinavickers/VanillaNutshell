@@ -10,7 +10,8 @@ deleteFunction(id){
   return fetch(`http://localhost:8088/messages/${id}`, {
     method: "DELETE"
   }).then(res => res.json())
-},
+}
+,
 
 postFunction(entry){
         return fetch("http://localhost:8088/messages", {
@@ -23,16 +24,15 @@ postFunction(entry){
         }).then(post => post.json())
 },
 
-putFunction(entry,id){
+putFunction(value,id){
         return fetch(`http://localhost:8088/messages/${id}`, {
-          method: "PUT",
+          method: "PATCH",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(entry)
+          body: JSON.stringify(value)
         }).then(res => res.json())
-        .then(console.log(entry))
-
+        .then(console.log(value))
 }
 }
 
