@@ -1,16 +1,15 @@
 import userAPIfunctions from "./fetching"
 import hideDiv from "./classChanger"
-// creating a function to send logged in users information on the rest of there page
 function loginUser(){
    sessionStorage.clear()
    let email= document.querySelector("#login").value
    userAPIfunctions.getUser(email)
    .then((user)=>{
-       console.log(user.password)
        let validated= validatePassword(user)
-           console.log("Setting session storage", user)
           if(validated){
+              email = document.querySelector("#login")
                sessionStorage.setItem("user_id", user.id)
+               sessionStorage.setItem("email", email.value)
                hideDiv.hideLoginDiv()
                hideDiv.hideNavBarDiv()
                alert("welcome")
@@ -22,9 +21,6 @@ function loginUser(){
 
    function validatePassword(user){
        const passwordValue= document.querySelector("#password")
-       console.log(user.password)
-       console.log(passwordValue)
-       // user.password === passwordValue.value ? true : false
        if (user.password===passwordValue.value){
            return true
        } else {
