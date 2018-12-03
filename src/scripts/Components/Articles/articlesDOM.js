@@ -1,12 +1,12 @@
-import articleFetching from "./fetching"
-import articleDisplay from "./articleDisplay"
-const aside = document.querySelector(".articlesContainer");
+// import articleFetching from "./fetching"
+// import articleDisplay from "./articleUserComponent"
+// const aside = document.querySelector(".articlesContainer");
 
-function renderArticles(articles) {
-  articles.forEach(article => {
-    aside.innerHTML += articleDisplay(article);
-  });
-  articleFetching.getFunction()
-}
+// function renderArticles(articles) {
+//   articles.forEach(article => {
+//     aside.innerHTML += articleDisplay(article);
+//   });
+//   articleFetching.getFunction()
+// }
 
-export default renderArticles
+// export default renderArticles
