@@ -1,5 +1,5 @@
 import postMessage from "./postMessage"
-import deleteMessage from "./deleteMessage"
+import deleteMessages from "./deleteMessage"
 import editMessage from "./editMessage"
 const messageFunctionality= {
 
@@ -26,7 +26,7 @@ deleteButton(){
 document.addEventListener("click", function (e){
     if (e.target && e.target.id=== "deleteButton"){
         let messageIdNumber =e.target.className
-        deleteMessage(messageIdNumber)}
+        deleteMessages(messageIdNumber)}
 })
 }
 }
