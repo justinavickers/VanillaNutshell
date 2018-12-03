@@ -4,9 +4,9 @@ function taskFormDiv(task){
   let taskForm = `
   <div id="taskForm class="taskForm">
   <h1>New Task</h1>
-  <input type="text" id=${task.name} class="taskName" value="Name">
-  <input type="date" id=${task.date} class="taskDate" value="Date">
-  <input type="button" id=${task.submit} value="submit" class="submitTask">
+  <input type="text" id="taskName" class="taskName" value="Name">
+  <input type="date" id="taskDate" class="taskDate" value="Date">
+  <input type="button" id="submitTask" value="submit" class="submitTask">
   <input type="button" id="deleteTask" class="deleteTask">
   </div>
   `
