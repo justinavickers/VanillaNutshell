@@ -11,9 +11,7 @@ function domTask(parsedTasks) {
 }
 let tasksToDom = () => {
     domEntry.innerHTML=""
+    domEntry.innerHTML= taskFormDiv()
     taskAPIFunctions.getTasks().then(parsedTasks => domTask(parsedTasks))
-    domEntry.innerHTML = taskFormDiv()
   }
-
-
 export default tasksToDom

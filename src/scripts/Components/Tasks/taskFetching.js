@@ -12,7 +12,7 @@ const taskAPIFunctions = {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(task)
-    })
+    }).then(post => post.json())
   }
 }
 export default taskAPIFunctions

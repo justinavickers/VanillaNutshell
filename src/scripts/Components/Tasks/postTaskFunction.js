@@ -1,21 +1,16 @@
 import taskAPIFunctions from "./taskFetching"
-import taskForm from "./taskForm"
-
-function newTaskCreation(task){
-  let taskName = document.querySelctor(".taskName")
-  let taskDate = taskForm.document.querySelctor(".taskDate")
- 
-
-  task = {
-    userId: sessionStorage.getItem("user_id"),
-    taskName: taskName.value,
-    taskDate: taskDate.valueAsDate,
+import tasksToDom from "injectTask"
+function newTaskCreation(){
+  // let taskName = document.querySelctor("#taskName")
+  // let taskDate = document.querySelctor("#taskDate")
+ const task = {
+    userId: sessionStorage.user_id,
+    taskName: document.querySelector(".taskName").value,
+    taskDate: document.querySelector(".taskDate").value,
     taskCompleted: false
     }
-      taskAPIFunctions.postTask(task)
-      .then(() => {
-        return newTaskCreation(task)
-      }
-    )}
-
+    taskAPIFunctions.postTask(task).then(() => {
+      tasksToDom()
+    })
+ }
 export default newTaskCreation
