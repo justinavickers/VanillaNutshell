@@ -1,11 +1,23 @@
-import newTaskCreation from "./postTaskFunction"
+import newTaskCreation from "./postTask"
+import deleteTask from "./deleteTask"
 
-function newTask(){
-  document.addEventListener("click", function (e){
-    if (e.target && e.target.id === "taskButton"){
-      newTaskCreation()
-      console.log("it posted")
-    }
-  })
+const taskManager = {
+
+  newTask() {
+    document.addEventListener("click", function (e) {
+      if (e.target && e.target.id === "taskButton") {
+        newTaskCreation()
+        console.log("it posted")
+      }
+    })
+  },
+  deleteTask() {
+    document.addEventListener("click", function (e) {
+      if (e.target && e.target.id === "deleteButton") {
+        let taskIdNumber = e.target.className
+        deleteTask(taskIdNumber)
+      }
+    })
+  }
 }
-export default newTask
+export default taskManager

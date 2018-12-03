@@ -1,14 +1,13 @@
 import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
-import tasksToDom from "./Components/Tasks/injectTask"
+import tasksToDom from "./Components/Tasks/taskDisplay"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
 import eventListening from "./Components/Events/eventListeners"
 import messageToDom from "./Components/Messages/messageDisplay"
-import newTask from "./Components/Tasks/taskEvents"
+import taskManager from "./Components/Tasks/taskEvents"
 import loginUser from "./Components/Login/loginUser"
 import messageFunctionality from "./Components/Messages/messageEventListners";
-
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
 const logout = document.querySelector("#logOutNav")
@@ -32,7 +31,8 @@ loginUser()
 
 taskNav.addEventListener("click", ()=> {
 tasksToDom()
-newTask()
+taskManager.newTask()
+taskManager.deleteTask()
 })
 
 
