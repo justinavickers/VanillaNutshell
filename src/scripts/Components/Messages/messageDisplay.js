@@ -1,5 +1,6 @@
 import messageFetching from "./fetching"
-import messageDiv from "./messageComponent"
+import messageDiv from "./messageUserComponent"
+import messageForm from "./messageForm"
 
 let domEntry = document.querySelector(".domEntry")
 function domMessage(parsedMessages) {
@@ -11,7 +12,8 @@ function domMessage(parsedMessages) {
 
 
 let messagesToDom = () => {
-  domEntry.innerHTML=""
-  messageFetching.getFunction().then(parsedMessages => domMessage(parsedMessages))
+    domEntry.innerHTML=""
+    domEntry.innerHTML = messageForm()
+    messageFetching.getFunction().then(parsedMessages => domMessage(parsedMessages))
 }
 export default messagesToDom
