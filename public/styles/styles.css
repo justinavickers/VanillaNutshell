@@ -40,7 +40,18 @@ body{
   width:60px;
   height:25px;
 }
-
+.submitTask{
+  border-radius:20px;
+  background: skyblue;
+  width:50px;
+  height:25;
+}
+.deleteTask{
+  border-radius:20px;
+  background: red;
+  width:50;
+  height:25;
+}
 .loginbox {
 
 }

@@ -4,31 +4,38 @@ import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
 import messageToDom from "./Components/Messages/messageDisplay"
+import newTaskCreation from "./Components/Tasks/postTaskFunction"
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
-const logout= document.querySelector("#logOutNav")
-let taskNav = document.querySelector("#taskNav")
+const logout = document.querySelector("#logOutNav")
+const taskNav = document.querySelector("#taskNav")
 const message = document.querySelector("#messageNav")
-
+const postTask = document.querySelector("#taskSubmit")
 const article = document.querySelector("#articleNav")
 let eventNav = document.querySelector("#eventNav")
 
-logout.addEventListener("click",()=> {hideDiv.LogOut()})
-newUsers.addEventListener("click", ()=> {
+logout.addEventListener("click", () => { hideDiv.LogOut() })
+newUsers.addEventListener("click", () => {
    registerUser()
 })
-existingUserButton.addEventListener("click", ()=>{
+existingUserButton.addEventListener("click", () => {
    registerUser()
 })
-taskNav.addEventListener("click", ()=> {
-  tasksToDom()
+taskNav.addEventListener("click", () => {
+   tasksToDom()
+      .then(
+         postTask.addEventListener("click", () => {
+            newTaskCreation(task)
+         })
+      )
 })
-article.addEventListener("click", ()=> {
-   articleContentDOM()})
-message.addEventListener("click", ()=> { messageToDom()
+article.addEventListener("click", () => {
+   articleContentDOM()
 })
-
+message.addEventListener("click", () => {
+   messageToDom()
+})
 eventNav.addEventListener("click", () => {
    eventsDom()
 })
