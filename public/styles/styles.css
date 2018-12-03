@@ -57,3 +57,12 @@ body{
   width:60px;
   height:25px;
 }
+
+.eventDiv {
+  background-color: darkcyan;
+  opacity: 0.8;
+  justify-content: flex-end;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
