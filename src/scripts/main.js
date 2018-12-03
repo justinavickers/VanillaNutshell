@@ -33,10 +33,6 @@ taskNav.addEventListener("click", ()=> {
 tasksToDom()
 })
 
-article.addEventListener("click", ()=> {
-articleContentDOM()
-})
-
 message.addEventListener("click", ()=> {
 messageToDom()
 messageFunctionality.messageButton()
