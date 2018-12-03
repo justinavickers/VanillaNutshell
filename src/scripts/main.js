@@ -3,6 +3,7 @@ import hideDiv from "./Components/Login/classChanger"
 import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
+import eventListening from "./Components/Events/eventListeners"
 import messageToDom from "./Components/Messages/messageDisplay"
 import loginUser from "./Components/Login/loginUser"
 import messageFunctionality from "./Components/Messages/messageEventListners";
@@ -41,10 +42,9 @@ messageFunctionality.messageButton()
 // messageFunctionality.editButton()
 messageFunctionality.deleteButton()
 })
-
 eventNav.addEventListener("click", () => {
-eventsDom()
+  eventsDom()
+  eventListening.submitEvent()
+  eventListening.editEvent()
+  eventListening.deleteEvent()
 })
-
-
-
