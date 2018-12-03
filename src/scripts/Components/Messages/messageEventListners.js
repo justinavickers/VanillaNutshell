@@ -16,7 +16,9 @@ document.addEventListener("click", function (e){
 deleteButton(){
 document.addEventListener("click", function (e){
     if (e.target && e.target.id=== "deleteButton"){
-        deleteMessage()
+        let messageIdNumber =e.target.className
+        console.log(messageIdNumber)
+        deleteMessage(messageIdNumber)
         console.log("hello deleteButton")}
 })
 }

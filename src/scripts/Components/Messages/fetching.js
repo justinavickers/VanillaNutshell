@@ -10,7 +10,8 @@ deleteFunction(id){
   return fetch(`http://localhost:8088/messages/${id}`, {
     method: "DELETE"
   }).then(res => res.json())
-},
+}
+,
 
 postFunction(entry){
         return fetch("http://localhost:8088/messages", {
