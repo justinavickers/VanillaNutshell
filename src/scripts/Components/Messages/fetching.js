@@ -25,8 +25,6 @@ postFunction(entry){
 },
 
 putFunction(value,id){
-    console.log(value)
-    console.log(id)
         return fetch(`http://localhost:8088/messages/${id}`, {
           method: "PATCH",
           headers: {
