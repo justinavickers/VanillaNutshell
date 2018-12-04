@@ -1,4 +1,4 @@
-const articleFetching={
+const articleFetching = {
 
   getFunction:() => {
       return fetch("http://localhost:8088/articles")
@@ -27,6 +27,12 @@ const articleFetching={
           }).then(res => res.json())
           .then(console.log(article))
 
+  },
+
+  deleteFunction(id){
+    return fetch(`http://localhost:8088/articles/${id}`, {
+      method: "DELETE"
+    }).then(res => res.json())
   }
   }
 
