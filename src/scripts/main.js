@@ -33,6 +33,7 @@ taskNav.addEventListener("click", ()=> {
 tasksToDom()
 taskManager.newTask()
 taskManager.deleteTask()
+taskManager.editButton()
 })
 
 
@@ -48,7 +49,7 @@ messageFunctionality.deleteButton()
 })
 eventNav.addEventListener("click", () => {
   eventsDom()
-  eventListening.submitEvent()
-  eventListening.editEvent()
-  eventListening.deleteEvent()
+  // eventListening.submitEvent()
+  // eventListening.editEvent()
+  // eventListening.deleteEvent()
 })

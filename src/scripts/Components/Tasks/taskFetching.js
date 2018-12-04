@@ -1,11 +1,11 @@
 const taskAPIFunctions = {
 
-  getTasks(){
+  getTasks() {
     return fetch("http://localhost:8088/tasks")
-    .then(tasks => tasks.json())
-    .then(parsedTasks => parsedTasks)
+      .then(tasks => tasks.json())
+      .then(parsedTasks => parsedTasks)
   },
-  postTask(task){
+  postTask(task) {
     return fetch("http://localhost:8088/tasks", {
       method: "POST",
       headers: {
@@ -14,10 +14,23 @@ const taskAPIFunctions = {
       body: JSON.stringify(task)
     }).then(post => post.json())
   },
-  deleteTask(id){
+  deleteTask(id) {
     return fetch(`http://localhost:8088/tasks/${id}`, {
       method: "DELETE"
-    }).then(re => re.json())
+    }).then(r => r.json())
+  },
+  putTask(value, id) {
+    console.log("vlaue", value, id)
+    return fetch(`http://localhost:8088/tasks/${id}`, {
+      method: "PATCH",
+      header: {
+        "Content-Type": "application/json"
+     },
+     body: JSON.stringify(value)
+    }).then(r => r.json())
+    .then((r)=> {
+      return r
+    })
   }
 }
 export default taskAPIFunctions

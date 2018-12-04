@@ -6,7 +6,7 @@ function newTaskCreation(){
  const task = {
     user_id: sessionStorage.user_id,
     name: document.querySelector(".taskName").value,
-    date: document.querySelector(".taskDate").value,
+    date: document.querySelector(".taskDate").valueAsDate,
     completed: false
     }
     taskAPIFunctions.postTask(task).then(() => {
