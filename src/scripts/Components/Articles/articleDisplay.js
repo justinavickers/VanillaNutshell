@@ -1,10 +1,21 @@
-function articleDisplay(article) {
-  let articles= `
-  <h3>${article.newsTitle}</h3>
-  <h3>${article.synopsis}</h3>
-  <h3>${article.articleURL}</h3>
-  `
-  return articles
-}
+import articleFetching from "./fetching"
+import articleDisplay from "./articleUserComponent"
+import articleFormDiv from "./articleForm"
 
-export default articleDisplay
+let domEntry = document.querySelector(".domEntry")
+function articleComponent(parsedArticles){
+    parsedArticles.forEach(article => {
+      let articleContent = articleDisplay(article)
+      domEntry.innerHTML += articleContent
+    })
+ }
+
+ let articleContentDOM = () => {
+   domEntry.innerHTML=""
+   domEntry.innerHTML = articleFormDiv()
+   articleFetching.getFunction()
+   .then(parsedArticles => articleComponent(parsedArticles))
+
+
+ }
+export default articleContentDOM
