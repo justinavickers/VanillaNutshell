@@ -49,4 +49,5 @@ eventNav.addEventListener("click", () => {
 article.addEventListener("click", ()=> {
    articleContentDOM()
    articleListening.deleteButton()
+   articleListening.submitArticle()
 })
