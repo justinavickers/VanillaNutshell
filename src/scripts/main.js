@@ -6,7 +6,7 @@ import eventsDom from "./Components/Events/displayEvents"
 import eventListening from "./Components/Events/eventListeners"
 import messageToDom from "./Components/Messages/messageDisplay"
 import loginUser from "./Components/Login/loginUser"
-import messageFunctionality from "./Components/Messages/messageEventListners";
+import messageFunctionality from "./Components/Messages/messageEventListeners";
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
