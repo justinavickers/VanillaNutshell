@@ -1,4 +1,4 @@
-import messageFetching from "./fetching";
+import messageFetching from "./fetching"
 import messagesToDom from "./messageDisplay"
 function postMessage (){
 

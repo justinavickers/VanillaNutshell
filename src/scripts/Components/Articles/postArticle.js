@@ -12,8 +12,9 @@ function postToAPI() {
     date: dateValue,
     articleURL: URLvalue
   }
-  articleFetching.postFunction(object).then(() => {
+  articleFetching.postFunction(object).then( () => {
     articleContentDOM()
-  })
+  }
+  )
 }
 export default postToAPI
