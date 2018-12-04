@@ -9,11 +9,11 @@ const taskManager = {
     document.addEventListener("click", (e)=>{
       if(e.target && e.target.id === "editButton"){
         let Id = e.target.className
-        let taskDate = document.querySelector(".taskDate")
-        let taskName = document.querySelector(".taskName")
+        let taskDate = document.querySelector(".taskDate").value
+        let taskName = document.querySelector(".taskName").value
         let obj ={
-          name: taskName.value,
-          date: taskDate.valueAsDate
+          name: taskName,
+          date: taskDate
         }
         console.log("hello edit baby", obj)
          editTask(obj, Id)

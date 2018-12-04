@@ -22,15 +22,13 @@ const taskAPIFunctions = {
   putTask(value, id) {
     console.log("vlaue", value, id)
     return fetch(`http://localhost:8088/tasks/${id}`, {
-      method: "PATCH",
-      header: {
+      method: "PUT",
+      headers: {
         "Content-Type": "application/json"
      },
      body: JSON.stringify(value)
     }).then(r => r.json())
-    .then((r)=> {
-      return r
-    })
+    .then(r=> console.log(r))
   }
 }
 export default taskAPIFunctions

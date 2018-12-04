@@ -7,7 +7,7 @@ function taskDiv(task){
     `
     <div id="task" class="emptyContainer">
     <p>${task.name}</p>
-    <p>${task.valueAsDate}</p>
+    <p>${task.date}</p>
     ${task.user_id === sessionStorage.user_id ?
       editButtons: ""}
     </div>
