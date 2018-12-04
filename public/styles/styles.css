@@ -26,6 +26,21 @@
   padding:5px;
 }
 
+#deleteButton{
+  border-radius:20px;
+  background:rgb(127, 185, 221);
+  width:50px;
+  height:25px;
+  padding:5px;
+}
+#editButton{
+  border-radius:20px;
+  background:rgb(127, 185, 221);
+  width:50px;
+  height:25px;
+  padding:5px;
+}
+
 body{
   background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg)
 }
@@ -44,6 +59,15 @@ body{
 }
 
 .eventDiv {
+  background-color: darkcyan;
+  opacity: 0.8;
+  justify-content: flex-end;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.eventBox {
   background-color: darkcyan;
   opacity: 0.8;
   justify-content: flex-end;

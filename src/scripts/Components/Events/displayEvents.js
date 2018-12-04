@@ -12,8 +12,9 @@ let domEntry = document.querySelector(".domEntry")
 
 let eventsDom = () => {
   domEntry.innerHTML=""
-  domEntry.innerHTML = eventFormDiv()
-  eventAPIfunctions.getEvents().then(parsedEvents => domEvents(parsedEvents))
+  domEntry.innerHTML += eventFormDiv()
+  eventAPIfunctions.getEvents()
+  .then(parsedEvents => domEvents(parsedEvents))
 }
 
 export default eventsDom

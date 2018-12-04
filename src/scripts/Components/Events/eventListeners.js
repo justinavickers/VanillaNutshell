@@ -1,3 +1,5 @@
+import deleteEvent from "./eventDelete"
+
 const eventListening = {
   submitEvent() {
     document.addEventListener("click", (e) => {
@@ -11,7 +13,9 @@ const eventListening = {
   },
   deleteEvent() {
     document.addEventListener("click", function (e) {
-      if (e.target && e.target.id=== "delEv") {console.log("delete me silly")}
+      if (e.target && e.target.id === "delEv") {console.log("delete me silly")} {
+      let eventIdNumber = e.target.className
+      deleteEvent(eventIdNumber)}
     })
   }
 }

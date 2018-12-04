@@ -21,7 +21,13 @@ const eventAPIfunctions = {
       },
       body: JSON.stringify(event)
     }
-  )}
+  )},
+  deleteFunction(id) {
+    return fetch(`http://localhost:8088/events/${id}`, {
+      method: "DELETE"
+    })
+    .then(deleting => deleting.json() )
+  }
 }
 
 export default eventAPIfunctions
