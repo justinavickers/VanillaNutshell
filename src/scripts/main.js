@@ -6,8 +6,8 @@ import eventsDom from "./Components/Events/displayEvents"
 import eventListening from "./Components/Events/eventListeners"
 import messageToDom from "./Components/Messages/messageDisplay"
 import loginUser from "./Components/Login/loginUser"
-import messageFunctionality from "./Components/Messages/messageEventListners";
 import articleListening from "./Components/Articles/articleListeners";
+import messageFunctionality from "./Components/Messages/messageEventListeners";
 
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
@@ -36,7 +36,7 @@ tasksToDom()
 message.addEventListener("click", ()=> {
 messageToDom()
 messageFunctionality.messageButton()
-// messageFunctionality.editButton()
+messageFunctionality.editButton()
 messageFunctionality.deleteButton()
 })
 eventNav.addEventListener("click", () => {
