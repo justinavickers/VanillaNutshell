@@ -10,9 +10,12 @@ const taskManager = {
         let Id = e.target.className
         let taskDate = document.querySelector(".taskDate").value
         let taskName = document.querySelector(".taskName").value
+        let userId = sessionStorage.user_id
+        console.log(userId, "user")
         let obj ={
           name: taskName,
-          date: taskDate
+          date: taskDate,
+          user_id: userId
         }
         console.log("hello edit baby", obj)
          editTask(obj, Id)
