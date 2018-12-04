@@ -3,7 +3,6 @@ import deleteTask from "./deleteTask"
 import editTask from "./editTask";
 
 const taskManager = {
-
   editButton(){
     console.log("clicked edit button")
     document.addEventListener("click", (e)=>{
