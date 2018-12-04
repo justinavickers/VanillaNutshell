@@ -1,25 +1,22 @@
 import registerUser from "./Components/Login/registerUser"
 import hideDiv from "./Components/Login/classChanger"
 import tasksToDom from "./Components/Tasks/taskDisplay"
-import articleContentDOM from "./Components/Articles/articlePost"
+import articleContentDOM from "./Components/Articles/articleDisplay"
 import eventsDom from "./Components/Events/displayEvents"
 import eventListening from "./Components/Events/eventListeners"
 import messageToDom from "./Components/Messages/messageDisplay"
 import taskManager from "./Components/Tasks/taskEvents"
 import loginUser from "./Components/Login/loginUser"
-import messageFunctionality from "./Components/Messages/messageEventListners";
+import articleListening from "./Components/Articles/articleListeners";
+import messageFunctionality from "./Components/Messages/messageEventListeners";
+
 let existingUserButton = document.getElementById("loginButton")
 let newUsers = document.getElementById("signUpButton")
 const logout = document.querySelector("#logOutNav")
 const taskNav = document.querySelector("#taskNav")
 const message = document.querySelector("#messageNav")
-// const postTask = document.querySelector("#taskSubmit")
 const article = document.querySelector("#articleNav")
 let eventNav = document.querySelector("#eventNav")
-
-logout.addEventListener("click",()=> {
-   hideDiv.LogOut()
-})
 
 newUsers.addEventListener("click", ()=> {
 registerUser()
@@ -36,20 +33,21 @@ taskManager.deleteTask()
 taskManager.editButton()
 })
 
-
-article.addEventListener("click", ()=> {
-articleContentDOM()
-})
-
 message.addEventListener("click", ()=> {
 messageToDom()
 messageFunctionality.messageButton()
-// messageFunctionality.editButton()
+messageFunctionality.editButton()
 messageFunctionality.deleteButton()
 })
 eventNav.addEventListener("click", () => {
   eventsDom()
-  // eventListening.submitEvent()
-  // eventListening.editEvent()
-  // eventListening.deleteEvent()
+  eventListening.submitEvent()
+  eventListening.editEvent()
+  eventListening.deleteEvent()
+})
+
+article.addEventListener("click", ()=> {
+   articleContentDOM()
+   articleListening.deleteButton()
+   articleListening.submitArticle()
 })

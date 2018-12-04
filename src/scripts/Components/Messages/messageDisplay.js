@@ -13,7 +13,6 @@ function domMessage(parsedMessages) {
 
 let messagesToDom = () => {
     domEntry.innerHTML=""
-    // domEntry.innerHTML = messageForm()
     messageFetching.getFunction()
     .then(parsedMessages => domMessage(parsedMessages))
     .then(() => {

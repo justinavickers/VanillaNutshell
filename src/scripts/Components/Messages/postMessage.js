@@ -1,6 +1,5 @@
 import messageFetching from "./fetching"
 import messagesToDom from "./messageDisplay"
-// import messageFetching from "./fetching"
 function postMessage (){
 
 let message= {

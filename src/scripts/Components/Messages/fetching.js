@@ -1,7 +1,7 @@
 const messageFetching={
 
 getFunction(){
-    return fetch("http://localhost:8088/messages")
+    return fetch("http://localhost:8088/messages?_sort=id&_order=desc&_limit=5")
     .then(messages => messages.json())
     .then(parsedMessages => parsedMessages)
 },
@@ -32,7 +32,6 @@ putFunction(value,id){
           },
           body: JSON.stringify(value)
         }).then(res => res.json())
-        .then(console.log(value))
 }
 }
 
