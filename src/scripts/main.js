@@ -4,7 +4,6 @@ import tasksToDom from "./Components/Tasks/injectTask"
 import articleContentDOM from "./Components/Articles/articlePost"
 import eventsDom from "./Components/Events/displayEvents"
 import eventListening from "./Components/Events/eventListeners"
-import deleteEvent from "./Components/eventDelete"
 import messageToDom from "./Components/Messages/messageDisplay"
 import loginUser from "./Components/Login/loginUser"
 import messageFunctionality from "./Components/Messages/messageEventListners";
@@ -16,7 +15,6 @@ const message = document.querySelector("#messageNav")
 let taskNav = document.querySelector("#taskNav")
 const article = document.querySelector("#articleNav")
 let eventNav = document.querySelector("#eventNav")
-const delEv = document.querySelector("#delEv")
 
 logout.addEventListener("click",()=> {
    hideDiv.LogOut()
@@ -44,13 +42,10 @@ messageFunctionality.messageButton()
 // messageFunctionality.editButton()
 messageFunctionality.deleteButton()
 })
+
 eventNav.addEventListener("click", () => {
   eventsDom()
-  // eventListening.submitEvent()
-  // eventListening.editEvent()
-})
-
-delEv.addEventListener("click", () => {
-  eventsDom()
-  eventListening.deleteEvent()
+  eventListening.deleteButton()
+  eventListening.submitButton()
+  // eventListening.editButton()
 })

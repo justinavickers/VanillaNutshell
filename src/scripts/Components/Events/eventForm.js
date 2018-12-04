@@ -1,17 +1,16 @@
 function eventFormDiv() {
   let eventForm =
   `<div id="eventBox" class="eventBox">
-  <input type="text" id="eventName" class="eventName" placeholder="Name of event"/>
-  <br>
-  <input type="text" id="eventLocation" class="eventLocation" placeholder="Location"/>
-  <br>
-  <input type="date" id="eventDate" class="eventDate" placeholder="Date"/>
-  <br>
-  <input type="time" id="eventTime" class="eventTime" placeholder="Time"/>
-  <br>
-  <input type="button" id="submitEvent" class="submitEvent" value="Submit"/>
+  <input type="text" id="eventName" class="eventName" placeholder="Name of event" value=""/>
+  <br></br>
+  <input type="text" id="eventLocation" class="eventLocation" placeholder="Location" value="" />
+  <br></br>
+  <input type="date" id="eventDate" class="eventDate" placeholder="Date" value="" />
+  <br></br>
+  <input type="time" id="eventTime" class="eventTime" placeholder="Time" value="" />
+  </br></br>
+  <button id="subEv" class="submitEv">Submit</button>
   </div>`
-  console.log("why is this duplicating")
   return eventForm
 }
 
